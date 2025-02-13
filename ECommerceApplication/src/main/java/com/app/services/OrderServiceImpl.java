@@ -96,8 +96,6 @@ public class OrderServiceImpl implements OrderService {
 
 		
 		payment.setOrder(order);
-
-		System.out.println("INI TATA PUNYAAAAAAAAAA");
 		Bank bank = bankRepo.findByBankName(paymentDTO.getBankName());
 		System.out.println("ini bank: " + bank);
 		System.out.println("ini paymentdto getbankname: " + paymentDTO.getBankName());
