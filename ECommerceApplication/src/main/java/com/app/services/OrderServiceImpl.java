@@ -13,6 +13,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.app.entites.Bank;
 import com.app.entites.Cart;
 import com.app.entites.CartItem;
 import com.app.entites.Order;
@@ -24,12 +25,14 @@ import com.app.exceptions.ResourceNotFoundException;
 import com.app.payloads.OrderDTO;
 import com.app.payloads.OrderItemDTO;
 import com.app.payloads.OrderResponse;
+import com.app.payloads.PaymentDTO;
 import com.app.repositories.CartItemRepo;
 import com.app.repositories.CartRepo;
 import com.app.repositories.OrderItemRepo;
 import com.app.repositories.OrderRepo;
 import com.app.repositories.PaymentRepo;
 import com.app.repositories.UserRepo;
+import com.app.repositories.BankRepo;
 
 import jakarta.transaction.Transactional;
 
@@ -42,6 +45,9 @@ public class OrderServiceImpl implements OrderService {
 
 	@Autowired
 	public CartRepo cartRepo;
+
+	@Autowired
+	public BankRepo bankRepo;
 
 	@Autowired
 	public OrderRepo orderRepo;
@@ -65,7 +71,14 @@ public class OrderServiceImpl implements OrderService {
 	public ModelMapper modelMapper;
 
 	@Override
-	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod) {
+	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, PaymentDTO paymentDTO) {
+		System.out.println("ini paymentDTO di servis: " + paymentDTO);
+		Payment payment = new Payment();
+		if(paymentDTO != null && paymentDTO.getPaymentMethod() != null){
+			paymentDTO.setPaymentMethod(paymentMethod);
+		}else{
+			throw new APIException("metode ga cocok bro");
+		}
 
 		Cart cart = cartRepo.findCartByEmailAndCartId(email, cartId);
 
@@ -81,11 +94,35 @@ public class OrderServiceImpl implements OrderService {
 		order.setTotalAmount(cart.getTotalPrice());
 		order.setOrderStatus("Order Accepted !");
 
-		Payment payment = new Payment();
+		
 		payment.setOrder(order);
-		payment.setPaymentMethod(paymentMethod);
 
+		System.out.println("INI TATA PUNYAAAAAAAAAA");
+		Bank bank = bankRepo.findByBankName(paymentDTO.getBankName());
+		System.out.println("ini bank: " + bank);
+		System.out.println("ini paymentdto getbankname: " + paymentDTO.getBankName());
+		System.out.println("ini paymentdto getPaymentMethod: " + paymentDTO.getPaymentMethod());
+		String bankName = "";
+		if (bank != null) {
+			bankName = bank.getBankName();
+		}else{
+			System.out.println("masuk sini");
+		
+			throw new APIException("bank tidak terdaftar");
+		}
+		
+		if (paymentMethod.equals("bank transfer")){
+		}
+		else{
+			throw new APIException("paymentnya gaboleh selain bank transfer bro");
+		}
+		payment.setPaymentMethod(paymentMethod);
+		long norek = bank.getNorek();
+		payment.setNorek(norek);
+		payment.setBankName(bankName);
 		payment = paymentRepo.save(payment);
+
+		
 
 		order.setPayment(payment);
 
