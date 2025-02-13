@@ -1,0 +1,1009 @@
+{
+	"info": {
+		"_postman_id": "80c9d059-20db-4239-9ebd-25074940e489",
+		"name": "Tugas 1 Part 1 dan 2",
+		"description": "NOTES\n\nUpdate address --> when address is exist with specific data but different id, use from db, delete the wrong id from request body\n\nDelete address --> no validation to user which already mapped to the addresses itself",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26397281"
+	},
+	"item": [
+		{
+			"name": "auth-controller",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin2@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 4,\r\n  \"firstName\": \"Userrr\",\r\n  \"lastName\": \"Satuuu\",\r\n  \"mobileNumber\": \"0123456789\",\r\n  \"email\": \"user1@gmail.com\",\r\n  \"password\": \"12345678\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 102,\r\n      \"roleName\": \"USER\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 0,\r\n    \"street\": \"string\",\r\n    \"buildingName\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"country\": \"string\",\r\n    \"pincode\": \"string\"\r\n  },\r\n  \"cart\": {\r\n    \"cartId\": 0,\r\n    \"totalPrice\": 0,\r\n    \"products\": [\r\n      {\r\n        \"productId\": 0,\r\n        \"productName\": \"string\",\r\n        \"image\": \"string\",\r\n        \"description\": \"string\",\r\n        \"quantity\": 0,\r\n        \"price\": 0,\r\n        \"discount\": 0,\r\n        \"specialPrice\": 0\r\n      }\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user-controller",
+			"item": [
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/users/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User By User ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"stringg\",\r\n  \"mobileNumber\": \"0123456789\",\r\n  \"email\": \"usernew2@gmail.com\",\r\n  \"password\": \"userpassword\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 101,\r\n      \"roleName\": \"ADMIN\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 0,\r\n    \"street\": \"street editedd\",\r\n    \"buildingName\": \"stringg\",\r\n    \"city\": \"stringg\",\r\n    \"state\": \"stringg\",\r\n    \"country\": \"strging\",\r\n    \"pincode\": \"strigng\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/public/users/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User By User ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/users/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "address-controller",
+			"item": [
+				{
+					"name": "Create Address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"street\": \"jalan BARUUU\",\r\n  \"buildingName\": \"building BARUU\",\r\n  \"city\": \"city city\",\r\n  \"state\": \"state state\",\r\n  \"country\": \"country country\",\r\n  \"pincode\": \"pin pin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/address",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/addresses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address By ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"addressId\": 1,\r\n  \"street\": \"stringgggg\",\r\n  \"buildingName\": \"string\",\r\n  \"city\": \"string\",\r\n  \"state\": \"string\",\r\n  \"country\": \"string\",\r\n  \"pincode\": \"string\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/addresses/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"addresses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Address By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/addresses/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"addresses",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Address By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/addresses/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"addresses",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category-controller",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"categoryId\": 2,\r\n  \"categoryName\": \"category 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/category",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category By Category ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/categories/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart Cart ID Product ID Quantity",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"categoryName\": \"Category Update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/categories/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product-controller",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 4,\r\n  \"productName\": \"product 4\",\r\n  \"image\": \"image 4\",\r\n  \"description\": \"desc 4\",\r\n  \"quantity\": 10,\r\n  \"price\": 1,\r\n  \"discount\": 0,\r\n  \"specialPrice\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/categories/3/product",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"categories",
+								"3",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productName\": \"product 2 updated\",\r\n  \"image\": \"image 2 updated\",\r\n  \"description\": \"desc 2 updated\",\r\n  \"quantity\": 10,\r\n  \"price\": 0,\r\n  \"discount\": 0,\r\n  \"specialPrice\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/products/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/products/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product Image By Product ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Raihan/Downloads/concurrency vs parallelism.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/products/2/image",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"products",
+								"2",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products By Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/categories/3/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"categories",
+								"3",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products By Keywords",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/products/keyword/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"products",
+								"keyword",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart-controller",
+			"item": [
+				{
+					"name": "Get Carts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/carts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cart Cart ID Product ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/carts/2/product/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"carts",
+								"2",
+								"product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cart Cart ID Product ID Quantity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/carts/3/products/2/quantity/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"carts",
+								"3",
+								"products",
+								"2",
+								"quantity",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart Cart ID Product ID Quantity",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/carts/4/products/4/quantity/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"carts",
+								"4",
+								"products",
+								"4",
+								"quantity",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cart By Email Cart ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/users/admin2@gmail.com/carts/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"users",
+								"admin2@gmail.com",
+								"carts",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order-controller",
+			"item": [
+				{
+					"name": "Get User Order By Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/users/admin2@gmail.com/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"users",
+								"admin2@gmail.com",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Order By Email and Order ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/users/user@gmail.com/orders/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"users",
+								"user@gmail.com",
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payment Product By User Email Cart Id Payment Method",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/public/users/admin2@gmail.com/carts/3/payments/mandiri/order",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"users",
+								"admin2@gmail.com",
+								"carts",
+								"3",
+								"payments",
+								"mandiri",
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Payment Product By User Email Cart Id Payment Method",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/public/users/admin2@gmail.com/carts/3/payments/tfff/order",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"public",
+										"users",
+										"admin2@gmail.com",
+										"carts",
+										"3",
+										"payments",
+										"tfff",
+										"order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Feb 2025 10:39:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orderId\": 4,\n    \"email\": \"admin2@gmail.com\",\n    \"orderItems\": [\n        {\n            \"orderItemId\": 3,\n            \"product\": {\n                \"productId\": 2,\n                \"productName\": \"product 2 updated\",\n                \"image\": \"d7c88bd8-490d-4e85-9cac-872bc0edafc5.png\",\n                \"description\": \"desc 2 updated\",\n                \"quantity\": 8,\n                \"price\": 0,\n                \"discount\": 0,\n                \"specialPrice\": 0\n            },\n            \"quantity\": 1,\n            \"discount\": 0,\n            \"orderedProductPrice\": 0\n        }\n    ],\n    \"orderDate\": \"2025-02-13\",\n    \"payment\": {\n        \"paymentId\": 4,\n        \"paymentMethod\": \"tfff\"\n    },\n    \"totalAmount\": 0,\n    \"orderStatus\": \"Order Accepted !\"\n}"
+						},
+						{
+							"name": "Payment Product By User Email Cart Id Payment Method",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/public/users/admin2@gmail.com/carts/3/payments/mandiri/order",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"public",
+										"users",
+										"admin2@gmail.com",
+										"carts",
+										"3",
+										"payments",
+										"mandiri",
+										"order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Feb 2025 11:25:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orderId\": 5,\n    \"email\": \"admin2@gmail.com\",\n    \"orderItems\": [\n        {\n            \"orderItemId\": 4,\n            \"product\": {\n                \"productId\": 2,\n                \"productName\": \"product 2 updated\",\n                \"image\": \"d7c88bd8-490d-4e85-9cac-872bc0edafc5.png\",\n                \"description\": \"desc 2 updated\",\n                \"quantity\": 3,\n                \"price\": 0,\n                \"discount\": 0,\n                \"specialPrice\": 0\n            },\n            \"quantity\": 5,\n            \"discount\": 0,\n            \"orderedProductPrice\": 0\n        }\n    ],\n    \"orderDate\": \"2025-02-13\",\n    \"payment\": {\n        \"paymentId\": 5,\n        \"paymentMethod\": \"MANDIRI\",\n        \"paymentNumber\": \"9876543\"\n    },\n    \"totalAmount\": 0,\n    \"orderStatus\": \"Order Accepted !\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Order Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/users/admin2@gmail.com/orders/5/orderStatus/accepted",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"users",
+								"admin2@gmail.com",
+								"orders",
+								"5",
+								"orderStatus",
+								"accepted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Banks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/banks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"banks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk0NDU4NTksImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSJ9.12uvCFceDlo7CSo_HAs7QRLr8dH3f7xvxcgZW9ThSRA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080/api"
+		}
+	]
+}

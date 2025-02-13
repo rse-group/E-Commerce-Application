@@ -2,6 +2,8 @@ package com.app.controllers;
 
 import java.util.List;
 
+import com.app.enums.BankEnums;
+import com.app.payloads.BankResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +29,13 @@ public class OrderController {
 	
 	@Autowired
 	public OrderService orderService;
-	
+
+	@GetMapping("/public/banks")
+	public ResponseEntity<List<BankResponse>> getAllBanks() {
+		List<BankResponse> banks = BankEnums.getAllBank();
+		return new ResponseEntity<List<BankResponse>>(banks, HttpStatus.FOUND);
+	}
+
 	@PostMapping("/public/users/{email}/carts/{cartId}/payments/{paymentMethod}/order")
 	public ResponseEntity<OrderDTO> orderProducts(@PathVariable String email, @PathVariable Long cartId, @PathVariable String paymentMethod) {
 		OrderDTO order = orderService.placeOrder(email, cartId, paymentMethod);

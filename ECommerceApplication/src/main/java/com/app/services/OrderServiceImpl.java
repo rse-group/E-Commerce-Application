@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.app.enums.BankEnums;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -81,9 +82,17 @@ public class OrderServiceImpl implements OrderService {
 		order.setTotalAmount(cart.getTotalPrice());
 		order.setOrderStatus("Order Accepted !");
 
+		// Check if the bank is available or not
+		if(!BankEnums.checkBankByPaymentMethod(paymentMethod)) {
+			throw new ResourceNotFoundException("Payment", "PaymentMethod", paymentMethod);
+		}
+
+		// If the bank is available, then continue the payment process
+		BankEnums bank = BankEnums.valueOf(paymentMethod.toUpperCase());
 		Payment payment = new Payment();
 		payment.setOrder(order);
-		payment.setPaymentMethod(paymentMethod);
+		payment.setPaymentMethod(bank.name());		// Set the payment Method to the banks name
+		payment.setPaymentNumber(bank.getBankNumber());		// Set the bank number as the payment Number
 
 		payment = paymentRepo.save(payment);
 
