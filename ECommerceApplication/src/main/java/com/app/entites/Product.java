@@ -34,7 +34,6 @@ public class Product {
 	@Size(min = 3, message = "Product name must contain atleast 3 characters")
 	private String productName;
 
-
 	@NotBlank
 	@Size(min = 3, message = "Product brand must contain atleast 3 characters")
 	private String brand;
