@@ -59,7 +59,7 @@ public class CouponServiceImpl implements CouponService{
         System.out.println(coupons);
 
         if (coupons.size() == 0) {
-            throw  new APIException("No category is created till now");
+            throw  new APIException("No coupon is created till now");
         }
 
         List<CouponDTO> couponDTOs = coupons.stream().map(coupon -> modelMapper.map(coupon, CouponDTO.class)).collect(Collectors.toList());
