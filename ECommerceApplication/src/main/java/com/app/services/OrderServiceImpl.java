@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import com.app.entites.Cart;
 import com.app.entites.CartItem;
+import com.app.entites.Coupon;
 import com.app.entites.Order;
 import com.app.entites.OrderItem;
 import com.app.entites.Payment;
@@ -26,6 +27,7 @@ import com.app.payloads.OrderItemDTO;
 import com.app.payloads.OrderResponse;
 import com.app.repositories.CartItemRepo;
 import com.app.repositories.CartRepo;
+import com.app.repositories.CouponRepo;
 import com.app.repositories.OrderItemRepo;
 import com.app.repositories.OrderRepo;
 import com.app.repositories.PaymentRepo;
@@ -63,6 +65,9 @@ public class OrderServiceImpl implements OrderService {
 
 	@Autowired
 	public ModelMapper modelMapper;
+
+	@Autowired
+	public CouponRepo couponRepo;
 
 	@Override
 	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod) {
@@ -130,7 +135,7 @@ public class OrderServiceImpl implements OrderService {
 		return orderDTO;
 	}
 
-	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String coupon) {
+	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String couponCode) {
 
 		Cart cart = cartRepo.findCartByEmailAndCartId(email, cartId);
 
@@ -143,9 +148,10 @@ public class OrderServiceImpl implements OrderService {
 		order.setEmail(email);
 		order.setOrderDate(LocalDate.now());
 
-		if (coupon != null && !coupon.isEmpty()) {
-			// Assuming there's a method to validate and apply the coupon
-			order.applyCoupon(coupon, cart.getTotalPrice());
+		if (couponCode != null && !couponCode.isEmpty()) {
+			Coupon coupon = couponRepo.findByCode(couponCode);
+
+			order.applyCoupon(coupon);
 		} else {
 			order.setTotalAmount(cart.getTotalPrice());
 		}

@@ -1,38 +1,36 @@
 package com.app.entites;
 
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "coupons")
+@Data
 public class Coupon {
 
-    
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String code;
     private double discount;
     private boolean active;
 
-    public Boolean isValid(Coupon coupon) {
-        if (coupon != null && coupon.isActive()) {
-            return true;
-        }
-        return false;
+    public boolean isValid() {
+        return active;
     }
 
     @Override
