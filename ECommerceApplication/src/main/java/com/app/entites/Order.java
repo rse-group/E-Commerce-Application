@@ -45,4 +45,11 @@ public class Order {
 	
 	private Double totalAmount;
 	private String orderStatus;
+
+	public void applyCoupon(Coupon coupon) {
+		if (coupon != null && coupon.isValid()) {
+			double discount = coupon.getDiscount();
+			this.totalAmount -= this.totalAmount * discount / 100;
+		}
+	}
 }
