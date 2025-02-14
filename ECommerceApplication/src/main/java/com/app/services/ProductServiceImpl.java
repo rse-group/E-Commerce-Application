@@ -185,7 +185,7 @@ public class ProductServiceImpl implements ProductService {
 		Sort sortByAndOrder = sortOrder.equalsIgnoreCase("asc") ? Sort.by(sortBy).ascending()
 				: Sort.by(sortBy).descending();
 		Pageable pageDetails = PageRequest.of(pageNumber, pageSize, sortByAndOrder);
-		Page<Product> pageProducts = productRepo.findByBrand("%" + brand + "%", pageDetails);
+		Page<Product> pageProducts = productRepo.findByBrand(brand, pageDetails);
 		List<Product> products = pageProducts.getContent();
 		
 		if (products.size() == 0) {
