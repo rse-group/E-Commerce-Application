@@ -1,0 +1,3518 @@
+{
+	"info": {
+		"_postman_id": "c3ad424a-9a70-4ec8-b01e-c4f3d3e806ce",
+		"name": "Controller Tugas 1 Part 1 SPLE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29700736"
+	},
+	"item": [
+		{
+			"name": "address-controller",
+			"item": [
+				{
+					"name": "api/admin/addresses/{addressId}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/addresses/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"addresses",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/admin/addresses/{addressId}",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/addresses/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"addresses",
+										"3"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 14:58:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"addressId\": 3,\n    \"street\": \"202 Oak Lane\",\n    \"buildingName\": \"Oak Towers\",\n    \"city\": \"Lincoln\",\n    \"state\": \"Nebraska\",\n    \"country\": \"USA\",\n    \"pincode\": \"685085\"\n}"
+						}
+					]
+				},
+				{
+					"name": "api/admin/addresses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"addresses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/admin/addresses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/addresses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"addresses"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 14:58:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"addressId\": 1,\n        \"street\": \"101 Maple Street\",\n        \"buildingName\": \"Maple Heights\",\n        \"city\": \"Springfield\",\n        \"state\": \"Illinois\",\n        \"country\": \"USA\",\n        \"pincode\": \"627045\"\n    },\n    {\n        \"addressId\": 3,\n        \"street\": \"202 Oak Lane\",\n        \"buildingName\": \"Oak Towers\",\n        \"city\": \"Lincoln\",\n        \"state\": \"Nebraska\",\n        \"country\": \"USA\",\n        \"pincode\": \"685085\"\n    },\n    {\n        \"addressId\": 4,\n        \"street\": \"303 Pine Road\",\n        \"buildingName\": \"Pine Plaza\",\n        \"city\": \"Raleigh\",\n        \"state\": \"North Carolina\",\n        \"country\": \"USA\",\n        \"pincode\": \"276015\"\n    },\n    {\n        \"addressId\": 6,\n        \"street\": \"404 Elm Street\",\n        \"buildingName\": \"Elm Residency\",\n        \"city\": \"Helena\",\n        \"state\": \"Montana\",\n        \"country\": \"USA\",\n        \"pincode\": \"596015\"\n    },\n    {\n        \"addressId\": 8,\n        \"street\": \"505 Cedar Blvd\",\n        \"buildingName\": \"Cedar Apartments\",\n        \"city\": \"Cedar Rapids\",\n        \"state\": \"Iowa\",\n        \"country\": \"USA\",\n        \"pincode\": \"524015\"\n    },\n    {\n        \"addressId\": 9,\n        \"street\": \"606 Birch Avenue\",\n        \"buildingName\": \"Birchwood Condos\",\n        \"city\": \"Austin\",\n        \"state\": \"Texas\",\n        \"country\": \"USA\",\n        \"pincode\": \"733015\"\n    },\n    {\n        \"addressId\": 10,\n        \"street\": \"707 Redwood Circle\",\n        \"buildingName\": \"Redwood Village\",\n        \"city\": \"Bismarck\",\n        \"state\": \"North Dakota\",\n        \"country\": \"USA\",\n        \"pincode\": \"585015\"\n    },\n    {\n        \"addressId\": 11,\n        \"street\": \"808 Aspen Way\",\n        \"buildingName\": \"Aspen Homes\",\n        \"city\": \"Madison\",\n        \"state\": \"Wisconsin\",\n        \"country\": \"USA\",\n        \"pincode\": \"537035\"\n    },\n    {\n        \"addressId\": 12,\n        \"street\": \"909 Willow Drive\",\n        \"buildingName\": \"Willow Courts\",\n        \"city\": \"Phoenix\",\n        \"state\": \"Arizona\",\n        \"country\": \"USA\",\n        \"pincode\": \"850015\"\n    },\n    {\n        \"addressId\": 13,\n        \"street\": \"1010 Spruce Street\",\n        \"buildingName\": \"Spruce Towers\",\n        \"city\": \"Topeka\",\n        \"state\": \"Kansas\",\n        \"country\": \"USA\",\n        \"pincode\": \"666035\"\n    },\n    {\n        \"addressId\": 14,\n        \"street\": \"string\",\n        \"buildingName\": \"string\",\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"country\": \"string\",\n        \"pincode\": \"string\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "put address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"addressId\": 14,\r\n  \"street\": \"string1\",\r\n  \"buildingName\": \"string1\",\r\n  \"city\": \"string1\",\r\n  \"state\": \"string1\",\r\n  \"country\": \"string1\",\r\n  \"pincode\": \"string1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/addresses/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"addresses",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put address",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \"addressId\": 14,\r\n  \"street\": \"string1\",\r\n  \"buildingName\": \"string1\",\r\n  \"city\": \"string1\",\r\n  \"state\": \"string1\",\r\n  \"country\": \"string1\",\r\n  \"pincode\": \"string1\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/addresses/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"addresses",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 14:59:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"addressId\": 14,\n    \"street\": \"string1\",\n    \"buildingName\": \"string1\",\n    \"city\": \"string1\",\n    \"state\": \"string1\",\n    \"country\": \"string1\",\n    \"pincode\": \"string1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/addresses/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"addresses",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete address",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/addresses/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"addresses",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 14:59:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Address deleted succesfully with addressId: 14"
+						}
+					]
+				},
+				{
+					"name": "api/admin/addresses/{addressId}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"street\": \"string2\",\r\n  \"buildingName\": \"string2\",\r\n  \"city\": \"string2\",\r\n  \"state\": \"string2\",\r\n  \"country\": \"string2\",\r\n  \"pincode\": \"string2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/admin/addresses/{addressId}",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"street\": \"string2\",\r\n  \"buildingName\": \"string2\",\r\n  \"city\": \"string2\",\r\n  \"state\": \"string2\",\r\n  \"country\": \"string2\",\r\n  \"pincode\": \"string2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/address",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"address"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 14:59:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"addressId\": 15,\n    \"street\": \"string2\",\n    \"buildingName\": \"string2\",\n    \"city\": \"string2\",\n    \"state\": \"string2\",\n    \"country\": \"string2\",\n    \"pincode\": \"string2\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth-controller",
+			"item": [
+				{
+					"name": "api/register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 11,\r\n    \"firstName\": \"namapertama\",\r\n    \"lastName\": \"namakedua\",\r\n    \"mobileNumber\": \"0123456789\",\r\n    \"email\": \"namapertama.namakedua@example.com\",\r\n    \"password\": \"namapertamaPassword345\",\r\n    \"roles\": [\r\n      {\r\n        \"roleId\": 11,\r\n        \"roleName\": \"USER\"\r\n      }\r\n    ],\r\n    \"address\": {\r\n      \"addressId\": 10,\r\n      \"street\": \"1010 Spruce Street\",\r\n      \"buildingName\": \"Spruce Towers\",\r\n      \"city\": \"Topeka\",\r\n      \"state\": \"Kansas\",\r\n      \"country\": \"USA\",\r\n      \"pincode\": \"666035\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 10,\r\n      \"totalPrice\": 1000,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 10,\r\n          \"productName\": \"Gaming Console\",\r\n          \"image\": \"console.png\",\r\n          \"description\": \"Latest gaming console\",\r\n          \"quantity\": 1,\r\n          \"price\": 1000,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 0\r\n        }\r\n      ]\r\n    }\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 11,\r\n    \"firstName\": \"namapertama\",\r\n    \"lastName\": \"namakedua\",\r\n    \"mobileNumber\": \"0123456789\",\r\n    \"email\": \"namapertama.namakedua@example.com\",\r\n    \"password\": \"namapertamaPassword345\",\r\n    \"roles\": [\r\n      {\r\n        \"roleId\": 11,\r\n        \"roleName\": \"USER\"\r\n      }\r\n    ],\r\n    \"address\": {\r\n      \"addressId\": 10,\r\n      \"street\": \"1010 Spruce Street\",\r\n      \"buildingName\": \"Spruce Towers\",\r\n      \"city\": \"Topeka\",\r\n      \"state\": \"Kansas\",\r\n      \"country\": \"USA\",\r\n      \"pincode\": \"666035\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 10,\r\n      \"totalPrice\": 1000,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 10,\r\n          \"productName\": \"Gaming Console\",\r\n          \"image\": \"console.png\",\r\n          \"description\": \"Latest gaming console\",\r\n          \"quantity\": 1,\r\n          \"price\": 1000,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 0\r\n        }\r\n      ]\r\n    }\r\n  }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:01:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk2OTMsImVtYWlsIjoibmFtYXBlcnRhbWEubmFtYWtlZHVhQGV4YW1wbGUuY29tIn0.MmeTFXHddaWqbujcDTcSjefXqbxBrkYWRv5_Jl8u5tY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "api/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \"email\": \"alice.johnson@example.com\",\r\n    \"password\": \"password123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \"email\": \"alice.johnson@example.com\",\r\n    \"password\": \"password123\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:03:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cart-controller",
+			"item": [
+				{
+					"name": "api/admin/carts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"carts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/admin/carts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/carts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"carts"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:04:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"cartId\": 1,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 2,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 3,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 4,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 5,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 6,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 7,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 8,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 9,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 10,\n        \"totalPrice\": 0,\n        \"products\": []\n    },\n    {\n        \"cartId\": 11,\n        \"totalPrice\": 0,\n        \"products\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete carts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/carts/1/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"carts",
+								"1",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete carts",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/carts/1/product/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"carts",
+										"1",
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:04:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product not found with productId: 1\",\n    \"status\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "put carts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/carts/1/products/1/quantity/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"carts",
+								"1",
+								"products",
+								"1",
+								"quantity",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put carts",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/carts/1/products/1/quantity/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"carts",
+										"1",
+										"products",
+										"1",
+										"quantity",
+										"5"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:05:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product not found with productId: 1\",\n    \"status\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "post carts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/carts/1/products/5/quantity/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"carts",
+								"1",
+								"products",
+								"5",
+								"quantity",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "post carts",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/carts/1/products/5/quantity/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"carts",
+										"1",
+										"products",
+										"5",
+										"quantity",
+										"5"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:13:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cartId\": 1,\n    \"totalPrice\": 0,\n    \"products\": [\n        {\n            \"productId\": 5,\n            \"productName\": \"produk4\",\n            \"image\": \"default.png\",\n            \"description\": \"deskripsi4\",\n            \"quantity\": 95,\n            \"price\": 0,\n            \"discount\": 0,\n            \"specialPrice\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "category-controller",
+			"item": [
+				{
+					"name": "put category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"categoryId\": 3,\r\n  \"categoryName\": \"kategoritigabaru\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"categoryId\": 3,\r\n  \"categoryName\": \"kategoritigabaru\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/categories/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:07:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 3,\n    \"categoryName\": \"kategoritigabaru\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/categories/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:08:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Category with categoryId: 11 deleted successfully !!!"
+						}
+					]
+				},
+				{
+					"name": "post category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"categoryId\": 11,\r\n  \"categoryName\": \"kategorisebelas\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "post category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \"categoryId\": 11,\r\n  \"categoryName\": \"kategorisebelas\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"category"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:08:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 11,\n    \"categoryName\": \"kategorisebelas\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"categories"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:08:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"categoryId\": 1,\n            \"categoryName\": \"kategorisatu\"\n        },\n        {\n            \"categoryId\": 2,\n            \"categoryName\": \"kategoridua\"\n        }\n    ],\n    \"pageNumber\": 0,\n    \"pageSize\": 2,\n    \"totalElements\": 10,\n    \"totalPages\": 5,\n    \"lastPage\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order-controller",
+			"item": [
+				{
+					"name": "get order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"orders"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:09:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"orderId\": 4,\n            \"email\": \"alice.johnson@example.com\",\n            \"orderItems\": [\n                {\n                    \"orderItemId\": 2,\n                    \"product\": {\n                        \"productId\": 3,\n                        \"productName\": \"produkdua\",\n                        \"image\": \"default.png\",\n                        \"description\": \"deskripsidua\",\n                        \"quantity\": 70,\n                        \"price\": 0,\n                        \"discount\": 0,\n                        \"specialPrice\": 0\n                    },\n                    \"quantity\": 3,\n                    \"discount\": 0,\n                    \"orderedProductPrice\": 0\n                }\n            ],\n            \"orderDate\": \"2025-02-10\",\n            \"payment\": {\n                \"paymentId\": 4,\n                \"paymentMethod\": \"kartu\"\n            },\n            \"totalAmount\": 0,\n            \"orderStatus\": \"Order Accepted !\"\n        },\n        {\n            \"orderId\": 2,\n            \"email\": \"charlie.brown@example.com\",\n            \"orderItems\": [\n                {\n                    \"orderItemId\": 1,\n                    \"product\": {\n                        \"productId\": 3,\n                        \"productName\": \"produkdua\",\n                        \"image\": \"default.png\",\n                        \"description\": \"deskripsidua\",\n                        \"quantity\": 70,\n                        \"price\": 0,\n                        \"discount\": 0,\n                        \"specialPrice\": 0\n                    },\n                    \"quantity\": 3,\n                    \"discount\": 0,\n                    \"orderedProductPrice\": 0\n                }\n            ],\n            \"orderDate\": \"2025-02-10\",\n            \"payment\": {\n                \"paymentId\": 2,\n                \"paymentMethod\": \"kartu\"\n            },\n            \"totalAmount\": 0,\n            \"orderStatus\": \"Order Accepted !\"\n        }\n    ],\n    \"pageNumber\": 0,\n    \"pageSize\": 2,\n    \"totalElements\": 10,\n    \"totalPages\": 5,\n    \"lastPage\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "put order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/users/alice.johnson@example.com/orders/4/orderStatus/selesai",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"alice.johnson@example.com",
+								"orders",
+								"4",
+								"orderStatus",
+								"selesai"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/users/alice.johnson@example.com/orders/4/orderStatus/selesai",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"alice.johnson@example.com",
+										"orders",
+										"4",
+										"orderStatus",
+										"selesai"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:10:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orderId\": 4,\n    \"email\": \"alice.johnson@example.com\",\n    \"orderItems\": [\n        {\n            \"orderItemId\": 2,\n            \"product\": {\n                \"productId\": 3,\n                \"productName\": \"produkdua\",\n                \"image\": \"default.png\",\n                \"description\": \"deskripsidua\",\n                \"quantity\": 70,\n                \"price\": 0,\n                \"discount\": 0,\n                \"specialPrice\": 0\n            },\n            \"quantity\": 3,\n            \"discount\": 0,\n            \"orderedProductPrice\": 0\n        }\n    ],\n    \"orderDate\": \"2025-02-10\",\n    \"payment\": {\n        \"paymentId\": 4,\n        \"paymentMethod\": \"kartu\"\n    },\n    \"totalAmount\": 0,\n    \"orderStatus\": \"selesai\"\n}"
+						}
+					]
+				},
+				{
+					"name": "post payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/alice.johnson@example.com/carts/1/payments/kartu/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"alice.johnson@example.com",
+								"carts",
+								"1",
+								"payments",
+								"kartu",
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "post payment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/public/users/alice.johnson@example.com/carts/1/payments/kartu/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"users",
+										"alice.johnson@example.com",
+										"carts",
+										"1",
+										"payments",
+										"kartu",
+										"order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:13:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orderId\": 14,\n    \"email\": \"alice.johnson@example.com\",\n    \"orderItems\": [\n        {\n            \"orderItemId\": 11,\n            \"product\": {\n                \"productId\": 5,\n                \"productName\": \"produk4\",\n                \"image\": \"default.png\",\n                \"description\": \"deskripsi4\",\n                \"quantity\": 95,\n                \"price\": 0,\n                \"discount\": 0,\n                \"specialPrice\": 0\n            },\n            \"quantity\": 5,\n            \"discount\": 0,\n            \"orderedProductPrice\": 0\n        }\n    ],\n    \"orderDate\": \"2025-02-10\",\n    \"payment\": {\n        \"paymentId\": 14,\n        \"paymentMethod\": \"kartu\"\n    },\n    \"totalAmount\": 0,\n    \"orderStatus\": \"Order Accepted !\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/alice.johnson@example.com/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"alice.johnson@example.com",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/users/alice.johnson@example.com/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"users",
+										"alice.johnson@example.com",
+										"orders"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:14:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"orderId\": 4,\n        \"email\": \"alice.johnson@example.com\",\n        \"orderItems\": [\n            {\n                \"orderItemId\": 2,\n                \"product\": {\n                    \"productId\": 3,\n                    \"productName\": \"produkdua\",\n                    \"image\": \"default.png\",\n                    \"description\": \"deskripsidua\",\n                    \"quantity\": 70,\n                    \"price\": 0,\n                    \"discount\": 0,\n                    \"specialPrice\": 0\n                },\n                \"quantity\": 3,\n                \"discount\": 0,\n                \"orderedProductPrice\": 0\n            }\n        ],\n        \"orderDate\": \"2025-02-10\",\n        \"payment\": {\n            \"paymentId\": 4,\n            \"paymentMethod\": \"kartu\"\n        },\n        \"totalAmount\": 0,\n        \"orderStatus\": \"selesai\"\n    },\n    {\n        \"orderId\": 14,\n        \"email\": \"alice.johnson@example.com\",\n        \"orderItems\": [\n            {\n                \"orderItemId\": 11,\n                \"product\": {\n                    \"productId\": 5,\n                    \"productName\": \"produk4\",\n                    \"image\": \"default.png\",\n                    \"description\": \"deskripsi4\",\n                    \"quantity\": 95,\n                    \"price\": 0,\n                    \"discount\": 0,\n                    \"specialPrice\": 0\n                },\n                \"quantity\": 5,\n                \"discount\": 0,\n                \"orderedProductPrice\": 0\n            }\n        ],\n        \"orderDate\": \"2025-02-10\",\n        \"payment\": {\n            \"paymentId\": 14,\n            \"paymentMethod\": \"kartu\"\n        },\n        \"totalAmount\": 0,\n        \"orderStatus\": \"Order Accepted !\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get order by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/alice.johnson@example.com/orders/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"alice.johnson@example.com",
+								"orders",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get order by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/users/alice.johnson@example.com/orders/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"users",
+										"alice.johnson@example.com",
+										"orders",
+										"4"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:14:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orderId\": 4,\n    \"email\": \"alice.johnson@example.com\",\n    \"orderItems\": [\n        {\n            \"orderItemId\": 2,\n            \"product\": {\n                \"productId\": 3,\n                \"productName\": \"produkdua\",\n                \"image\": \"default.png\",\n                \"description\": \"deskripsidua\",\n                \"quantity\": 70,\n                \"price\": 0,\n                \"discount\": 0,\n                \"specialPrice\": 0\n            },\n            \"quantity\": 3,\n            \"discount\": 0,\n            \"orderedProductPrice\": 0\n        }\n    ],\n    \"orderDate\": \"2025-02-10\",\n    \"payment\": {\n        \"paymentId\": 4,\n        \"paymentMethod\": \"kartu\"\n    },\n    \"totalAmount\": 0,\n    \"orderStatus\": \"selesai\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product-controller",
+			"item": [
+				{
+					"name": "post product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"productId\": 0,\r\n  \"productName\": \"produk10\",\r\n  \"image\": \"imagedua.png\",\r\n  \"description\": \"deskripsi10\",\r\n  \"quantity\": 0,\r\n  \"price\": 0,\r\n  \"discount\": 0,\r\n  \"specialPrice\": 0,\r\n  \"category\": {\r\n    \"categoryId\": 2,\r\n    \"categoryName\": \"kategoridua\"\r\n  }}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/2/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"2",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"productId\": 0,\r\n  \"productName\": \"produk10\",\r\n  \"image\": \"imagedua.png\",\r\n  \"description\": \"deskripsi10\",\r\n  \"quantity\": 0,\r\n  \"price\": 0,\r\n  \"discount\": 0,\r\n  \"specialPrice\": 0,\r\n  \"category\": {\r\n    \"categoryId\": 2,\r\n    \"categoryName\": \"kategoridua\"\r\n  }}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/categories/2/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										"2",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:14:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 12,\n    \"productName\": \"produk10\",\n    \"image\": \"default.png\",\n    \"description\": \"deskripsi10\",\n    \"quantity\": 0,\n    \"price\": 0,\n    \"discount\": 0,\n    \"specialPrice\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "put product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"productId\": 2,\r\n  \"productName\": \"baru2\",\r\n  \"image\": \"baru2.png\",\r\n  \"description\": \"barubro2\",\r\n  \"quantity\": 0,\r\n  \"price\": 0,\r\n  \"discount\": 0,\r\n  \"specialPrice\": 0,\r\n  \"category\": {\r\n    \"categoryId\": 2,\r\n    \"categoryName\": \"kategoridua\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"productId\": 2,\r\n  \"productName\": \"baru2\",\r\n  \"image\": \"baru2.png\",\r\n  \"description\": \"barubro2\",\r\n  \"quantity\": 0,\r\n  \"price\": 0,\r\n  \"discount\": 0,\r\n  \"specialPrice\": 0,\r\n  \"category\": {\r\n    \"categoryId\": 2,\r\n    \"categoryName\": \"kategoridua\"}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/products/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:15:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 2,\n    \"productName\": \"baru2\",\n    \"image\": \"default.png\",\n    \"description\": \"barubro2\",\n    \"quantity\": 0,\n    \"price\": 0,\n    \"discount\": 0,\n    \"specialPrice\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/products/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:15:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Product with productId: 2 deleted successfully !!!"
+						}
+					]
+				},
+				{
+					"name": "put image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/411E6CAB-3913-4869-BA75-60C333FEE32E.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/products/3/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"3",
+								"image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put image",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Pictures/411E6CAB-3913-4869-BA75-60C333FEE32E.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/products/3/image",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"3",
+										"image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:16:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 3,\n    \"productName\": \"produkdua\",\n    \"image\": \"4cfa19d4-d5dd-4837-b502-8931de2e814f.jpg\",\n    \"description\": \"deskripsidua\",\n    \"quantity\": 70,\n    \"price\": 0,\n    \"discount\": 0,\n    \"specialPrice\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get product by categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTY5MzAsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.2dqPfh-U0C1y0qAOxZaRSuV3reNzkULK-HrTmOrUqjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/categories/2/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"categories",
+								"2",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get product by categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/categories/2/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"categories",
+										"2",
+										"products"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:18:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"productId\": 12,\n            \"productName\": \"produk10\",\n            \"image\": \"default.png\",\n            \"description\": \"deskripsi10\",\n            \"quantity\": 0,\n            \"price\": 0,\n            \"discount\": 0,\n            \"specialPrice\": 0\n        }\n    ],\n    \"pageNumber\": 0,\n    \"pageSize\": 2,\n    \"totalElements\": 1,\n    \"totalPages\": 1,\n    \"lastPage\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get product public",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get product public",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"products"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:19:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"productId\": 3,\n            \"productName\": \"produkdua\",\n            \"image\": \"4cfa19d4-d5dd-4837-b502-8931de2e814f.jpg\",\n            \"description\": \"deskripsidua\",\n            \"quantity\": 70,\n            \"price\": 0,\n            \"discount\": 0,\n            \"specialPrice\": 0\n        },\n        {\n            \"productId\": 4,\n            \"productName\": \"produk3\",\n            \"image\": \"default.png\",\n            \"description\": \"deskripsi3\",\n            \"quantity\": 100,\n            \"price\": 0,\n            \"discount\": 0,\n            \"specialPrice\": 0\n        }\n    ],\n    \"pageNumber\": 0,\n    \"pageSize\": 2,\n    \"totalElements\": 10,\n    \"totalPages\": 5,\n    \"lastPage\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "get product public by keyword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/products/keyword/produk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"products",
+								"keyword",
+								"produk"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get product public by keyword",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/products/keyword/produk",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"products",
+										"keyword",
+										"produk"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:19:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"productId\": 3,\n            \"productName\": \"produkdua\",\n            \"image\": \"4cfa19d4-d5dd-4837-b502-8931de2e814f.jpg\",\n            \"description\": \"deskripsidua\",\n            \"quantity\": 70,\n            \"price\": 0,\n            \"discount\": 0,\n            \"specialPrice\": 0\n        },\n        {\n            \"productId\": 4,\n            \"productName\": \"produk3\",\n            \"image\": \"default.png\",\n            \"description\": \"deskripsi3\",\n            \"quantity\": 100,\n            \"price\": 0,\n            \"discount\": 0,\n            \"specialPrice\": 0\n        }\n    ],\n    \"pageNumber\": 0,\n    \"pageSize\": 2,\n    \"totalElements\": 10,\n    \"totalPages\": 5,\n    \"lastPage\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user-controller",
+			"item": [
+				{
+					"name": "get users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:19:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"userId\": 1,\n            \"firstName\": \"Alice\",\n            \"lastName\": \"Johnson\",\n            \"mobileNumber\": \"1234567890\",\n            \"email\": \"alice.johnson@example.com\",\n            \"password\": \"$2a$10$9NlOONjCHRCndQgWg94XduPzh18m96aE3ADKk9619XJzPJH55tXqS\",\n            \"roles\": [\n                {\n                    \"roleId\": 1,\n                    \"roleName\": \"ADMIN\"\n                },\n                {\n                    \"roleId\": 102,\n                    \"roleName\": \"USER\"\n                }\n            ],\n            \"address\": {\n                \"addressId\": 1,\n                \"street\": \"101 Maple Street\",\n                \"buildingName\": \"Maple Heights\",\n                \"city\": \"Springfield\",\n                \"state\": \"Illinois\",\n                \"country\": \"USA\",\n                \"pincode\": \"627045\"\n            },\n            \"cart\": {\n                \"cartId\": 1,\n                \"totalPrice\": 0,\n                \"products\": []\n            }\n        },\n        {\n            \"userId\": 2,\n            \"firstName\": \"Bobby\",\n            \"lastName\": \"Smith\",\n            \"mobileNumber\": \"2345678901\",\n            \"email\": \"bobby.smith@example.com\",\n            \"password\": \"$2a$10$yNd.cTgS/Pmf3Rejwf71Geo3iE6UdDc2DgPBHtgINtfuN91/rwhsa\",\n            \"roles\": [\n                {\n                    \"roleId\": 2,\n                    \"roleName\": \"USER\"\n                },\n                {\n                    \"roleId\": 102,\n                    \"roleName\": \"USER\"\n                }\n            ],\n            \"address\": {\n                \"addressId\": 3,\n                \"street\": \"202 Oak Lane\",\n                \"buildingName\": \"Oak Towers\",\n                \"city\": \"Lincoln\",\n                \"state\": \"Nebraska\",\n                \"country\": \"USA\",\n                \"pincode\": \"685085\"\n            },\n            \"cart\": {\n                \"cartId\": 2,\n                \"totalPrice\": 0,\n                \"products\": []\n            }\n        }\n    ],\n    \"pageNumber\": 0,\n    \"pageSize\": 2,\n    \"totalElements\": 11,\n    \"totalPages\": 6,\n    \"lastPage\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "delete users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/users/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete users",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/users/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:20:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "User with userId 11 deleted successfully!!!"
+						}
+					]
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get user by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/public/users/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"users",
+										"10"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:20:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": 10,\n    \"firstName\": \"Jacks\",\n    \"lastName\": \"Moore\",\n    \"mobileNumber\": \"0123456789\",\n    \"email\": \"jacks.moore@example.com\",\n    \"password\": \"$2a$10$hHd/5FdRQa8Wi08y8bbi9OXZiFWzUl7/U1dFr9edzO1lz.XKcdBf2\",\n    \"roles\": [\n        {\n            \"roleId\": 10,\n            \"roleName\": \"USER\"\n        },\n        {\n            \"roleId\": 102,\n            \"roleName\": \"USER\"\n        }\n    ],\n    \"address\": {\n        \"addressId\": 13,\n        \"street\": \"1010 Spruce Street\",\n        \"buildingName\": \"Spruce Towers\",\n        \"city\": \"Topeka\",\n        \"state\": \"Kansas\",\n        \"country\": \"USA\",\n        \"pincode\": \"666035\"\n    },\n    \"cart\": {\n        \"cartId\": 10,\n        \"totalPrice\": 0,\n        \"products\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "put user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTk4MzUsImVtYWlsIjoiYWxpY2Uuam9obnNvbkBleGFtcGxlLmNvbSJ9.xSqLQWMfBxcbpvWO7batgueIMWGe-oH59wVjy5Dd4ng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 10,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"mobileNumber\": \"1234567890\",\r\n  \"email\": \"string@example.com\",\r\n  \"password\": \"string123\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 0,\r\n      \"roleName\": \"string\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 0,\r\n    \"street\": \"string\",\r\n    \"buildingName\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"country\": \"string\",\r\n    \"pincode\": \"string\"\r\n  },\r\n  \"cart\": {\r\n    \"cartId\": 0,\r\n    \"totalPrice\": 0,\r\n    \"products\": [\r\n      {\r\n        \"productId\": 0,\r\n        \"productName\": \"string\",\r\n        \"image\": \"string\",\r\n        \"description\": \"string\",\r\n        \"quantity\": 0,\r\n        \"price\": 0,\r\n        \"discount\": 0,\r\n        \"specialPrice\": 0\r\n      }\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userId\": 10,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"mobileNumber\": \"1234567890\",\r\n  \"email\": \"string@example.com\",\r\n  \"password\": \"string123\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 0,\r\n      \"roleName\": \"string\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 0,\r\n    \"street\": \"string\",\r\n    \"buildingName\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"country\": \"string\",\r\n    \"pincode\": \"string\"\r\n  },\r\n  \"cart\": {\r\n    \"cartId\": 0,\r\n    \"totalPrice\": 0,\r\n    \"products\": [\r\n      {\r\n        \"productId\": 0,\r\n        \"productName\": \"string\",\r\n        \"image\": \"string\",\r\n        \"description\": \"string\",\r\n        \"quantity\": 0,\r\n        \"price\": 0,\r\n        \"discount\": 0,\r\n        \"specialPrice\": 0\r\n      }\r\n    ]\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/public/users/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"public",
+										"users",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Feb 2025 15:21:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": 10,\n    \"firstName\": \"string\",\n    \"lastName\": \"string\",\n    \"mobileNumber\": \"1234567890\",\n    \"email\": \"string@example.com\",\n    \"password\": \"$2a$10$K3GTAFOxW/AhHu6.CXTlxe2fJuUyRF1xqC0sREHMDsJnqe7uiZfcy\",\n    \"roles\": [\n        {\n            \"roleId\": 10,\n            \"roleName\": \"USER\"\n        },\n        {\n            \"roleId\": 102,\n            \"roleName\": \"USER\"\n        }\n    ],\n    \"address\": {\n        \"addressId\": 16,\n        \"street\": \"string\",\n        \"buildingName\": \"string\",\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"country\": \"string\",\n        \"pincode\": \"string\"\n    },\n    \"cart\": {\n        \"cartId\": 10,\n        \"totalPrice\": 0,\n        \"products\": []\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
