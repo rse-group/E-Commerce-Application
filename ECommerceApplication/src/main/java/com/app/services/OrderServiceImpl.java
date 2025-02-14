@@ -73,12 +73,11 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, CreatePaymentDTO createPaymentDTO) {
-		System.out.println("ini createPaymentDTO di servis: " + createPaymentDTO);
 		Payment payment = new Payment();
 		if(createPaymentDTO != null && createPaymentDTO.getPaymentMethod() != null){
 			createPaymentDTO.setPaymentMethod(paymentMethod);
 		}else{
-			throw new APIException("metode ga cocok bro");
+			throw new APIException("Metode tidak cocok");
 		}
 
 		Cart cart = cartRepo.findCartByEmailAndCartId(email, cartId);
@@ -99,33 +98,24 @@ public class OrderServiceImpl implements OrderService {
 		payment.setOrder(order);
 		
 		Bank bank = bankRepo.findByBankName(createPaymentDTO.getBankName());
-		
-		System.out.println("ini bank: " + bank);
-		System.out.println("ini paymentdto getbankname: " + createPaymentDTO.getBankName());
-		System.out.println("ini paymentdto getPaymentMethod: " + createPaymentDTO.getPaymentMethod());
 		String bankName = "";
 		if (bank != null) {
 			bankName = bank.getBankName();
 		}else{
-			System.out.println("masuk sini");
 		
-			throw new APIException("bank tidak terdaftar");
+			throw new APIException("Bank tidak terdaftar");
 		}
 		
 		if (paymentMethod.equals("bank transfer")){
 		}
 		else{
-			throw new APIException("paymentnya gaboleh selain bank transfer bro");
+			throw new APIException("Tidak menerima Payment selain bank transfer");
 		}
 		payment.setPaymentMethod(paymentMethod);
 		long norek = bank.getNorek();
-		
-		// payment.setNorek(norek);
+
 		payment.setBankName(bankName);
 		payment = paymentRepo.save(payment);
-
-		
-
 		order.setPayment(payment);
 
 		Order savedOrder = orderRepo.save(order);
@@ -166,8 +156,6 @@ public class OrderServiceImpl implements OrderService {
 		PaymentDTO paymentDTO = new PaymentDTO(); 
 		paymentDTO.setNorek(norek);
 		orderDTO.setPayment(paymentDTO);
-		System.out.println("INI ORDERDTO.GETPAYMENT: " + orderDTO.getPayment());
-		
 		orderItems.forEach(item -> orderDTO.getOrderItems().add(modelMapper.map(item, OrderItemDTO.class)));
 
 		return orderDTO;

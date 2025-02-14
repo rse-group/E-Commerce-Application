@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.config.AppConstants;
 import com.app.payloads.OrderDTO;
 import com.app.payloads.OrderResponse;
-import com.app.payloads.PaymentDTO;
 import com.app.payloads.CreatePaymentDTO;
 import com.app.services.OrderService;
 

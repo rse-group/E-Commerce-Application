@@ -5,7 +5,6 @@ import java.util.List;
 import com.app.payloads.CreatePaymentDTO;
 import com.app.payloads.OrderDTO;
 import com.app.payloads.OrderResponse;
-import com.app.payloads.PaymentDTO;
 
 public interface OrderService {
 	
