@@ -17,9 +17,10 @@ import com.app.config.AppConstants;
 import com.app.payloads.OrderDTO;
 import com.app.payloads.OrderResponse;
 import com.app.payloads.PaymentDTO;
+import com.app.payloads.CreatePaymentDTO;
 import com.app.services.OrderService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 @RestController
 @RequestMapping("/api")
@@ -30,10 +31,8 @@ public class OrderController {
 	public OrderService orderService;
 	
 	@PostMapping("/public/users/{email}/carts/{cartId}/payments/{paymentMethod}/order")
-	public ResponseEntity<OrderDTO> orderProducts(@PathVariable String email, @PathVariable Long cartId, @PathVariable String paymentMethod,  @RequestBody PaymentDTO paymentDTO) {
-		System.out.println("iniiiiii pentingggg " + paymentDTO);
-		System.out.println("iniiiiii pentingggg " + paymentDTO.getPaymentMethod());
-		OrderDTO order = orderService.placeOrder(email, cartId, paymentDTO.getPaymentMethod(), paymentDTO);
+	public ResponseEntity<OrderDTO> orderProducts(@PathVariable String email, @PathVariable Long cartId, @PathVariable String paymentMethod,  @RequestBody (required = false) CreatePaymentDTO createPaymentDTO) {
+		OrderDTO order = orderService.placeOrder(email, cartId, paymentMethod, createPaymentDTO);
 		
 		return new ResponseEntity<OrderDTO>(order, HttpStatus.CREATED);
 	}

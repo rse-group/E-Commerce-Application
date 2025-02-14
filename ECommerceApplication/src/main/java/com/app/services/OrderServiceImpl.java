@@ -22,6 +22,7 @@ import com.app.entites.Payment;
 import com.app.entites.Product;
 import com.app.exceptions.APIException;
 import com.app.exceptions.ResourceNotFoundException;
+import com.app.payloads.CreatePaymentDTO;
 import com.app.payloads.OrderDTO;
 import com.app.payloads.OrderItemDTO;
 import com.app.payloads.OrderResponse;
@@ -71,11 +72,11 @@ public class OrderServiceImpl implements OrderService {
 	public ModelMapper modelMapper;
 
 	@Override
-	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, PaymentDTO paymentDTO) {
-		System.out.println("ini paymentDTO di servis: " + paymentDTO);
+	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, CreatePaymentDTO createPaymentDTO) {
+		System.out.println("ini createPaymentDTO di servis: " + createPaymentDTO);
 		Payment payment = new Payment();
-		if(paymentDTO != null && paymentDTO.getPaymentMethod() != null){
-			paymentDTO.setPaymentMethod(paymentMethod);
+		if(createPaymentDTO != null && createPaymentDTO.getPaymentMethod() != null){
+			createPaymentDTO.setPaymentMethod(paymentMethod);
 		}else{
 			throw new APIException("metode ga cocok bro");
 		}
@@ -96,10 +97,12 @@ public class OrderServiceImpl implements OrderService {
 
 		
 		payment.setOrder(order);
-		Bank bank = bankRepo.findByBankName(paymentDTO.getBankName());
+		
+		Bank bank = bankRepo.findByBankName(createPaymentDTO.getBankName());
+		
 		System.out.println("ini bank: " + bank);
-		System.out.println("ini paymentdto getbankname: " + paymentDTO.getBankName());
-		System.out.println("ini paymentdto getPaymentMethod: " + paymentDTO.getPaymentMethod());
+		System.out.println("ini paymentdto getbankname: " + createPaymentDTO.getBankName());
+		System.out.println("ini paymentdto getPaymentMethod: " + createPaymentDTO.getPaymentMethod());
 		String bankName = "";
 		if (bank != null) {
 			bankName = bank.getBankName();
@@ -116,7 +119,8 @@ public class OrderServiceImpl implements OrderService {
 		}
 		payment.setPaymentMethod(paymentMethod);
 		long norek = bank.getNorek();
-		payment.setNorek(norek);
+		
+		// payment.setNorek(norek);
 		payment.setBankName(bankName);
 		payment = paymentRepo.save(payment);
 
@@ -157,8 +161,12 @@ public class OrderServiceImpl implements OrderService {
 
 			product.setQuantity(product.getQuantity() - quantity);
 		});
-
+		
 		OrderDTO orderDTO = modelMapper.map(savedOrder, OrderDTO.class);
+		PaymentDTO paymentDTO = new PaymentDTO(); 
+		paymentDTO.setNorek(norek);
+		orderDTO.setPayment(paymentDTO);
+		System.out.println("INI ORDERDTO.GETPAYMENT: " + orderDTO.getPayment());
 		
 		orderItems.forEach(item -> orderDTO.getOrderItems().add(modelMapper.map(item, OrderItemDTO.class)));
 

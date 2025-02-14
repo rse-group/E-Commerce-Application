@@ -32,6 +32,5 @@ public class Payment {
 	private String paymentMethod;
 
 	private String bankName;
-	private long norek;
 
 }
